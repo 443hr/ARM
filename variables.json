@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {},
     "functions": [],
-    "variables": {                                     //Variables are defined here
+    "variables": {                                     //Variables are defined here.
         "location": "Central US"
     },
     "resources": [
