@@ -1,4 +1,5 @@
 {
+    //With this you can create mutiple resource by giving number of counts and by using copy funtion.
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {},
