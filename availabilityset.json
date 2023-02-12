@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "availabilitySet1",
+            "type": "Microsoft.Compute/availabilitySets",
+            "apiVersion": "2021-03-01",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "availabilitySet1"
+            },
+            "sku": {
+                "name": "Aligned"           //Sku is defined 
+
+            },
+            "properties": {
+                "platformFaultDomainCount" : 3,         //fault domian 3
+                "platformUpdateDomainCount" : 2         //Update domain 2
+            }
+        }
+    ],
+    "outputs": {}
+}
