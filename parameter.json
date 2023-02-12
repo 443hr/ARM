@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {                             //Here parameter id defined 
+        "skutier": {
+            "type": "string",                  // Type is given
+            "defaultValue": "Premium",         // Default value comes from here
+            "allowedValues": ["Premium","Standard_GZRS"]       // What other options will be provided to select 
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "storageaccount1",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2021-04-01",
+            "tags": {
+                "displayName": "storageaccount1"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Premium_LRS",
+                "tier": "[parameters('skutier')]"        //Here the parameter is called
+            }
+        }
+    ],
+    "outputs": {}
+}
